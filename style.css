@@ -71,7 +71,7 @@ nav a.active{
         position: absolute;
         display: flex;
      
-        width: 20%;
+     
       margin-top: 25px;
        margin-left:130px;
         padding: 1px solid;
@@ -467,6 +467,7 @@ section{
     font-size: 3.9rem;
     margin-top: 100px;
     z-index: 1; 
+    border-bottom: 1px solid white;
 }
 #exp h1{
     font-size: 5rem;

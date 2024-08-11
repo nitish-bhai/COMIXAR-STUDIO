@@ -66,19 +66,17 @@ nav a.active{
     border-bottom: 3px solid #800000;
 }
 
-@media(max-width:995px){
+@media(min-width:300px) and (max-width:444px){
     nav{
         position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #800000;
-        border-bottom: 3px solid #800000;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        display: flex;
+     
+        width: 20%;
+      margin-top: 25px;
+       margin-left:130px;
+        padding: 1px solid;
         background-color: #000000;
-        border-top: 0.1rem solid rgba(17, 217, 37, 0.1);
+       
     }
 
     nav.active{
@@ -87,15 +85,15 @@ nav a.active{
 
     nav a{
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        font-size: 0.5rem;
+        margin: 10px;
     }
 
     nav a:hover,
     nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #800000;
+        padding: 0px;
+        border-radius: 0;
+        border-bottom: none;
     }
 }
 
@@ -307,6 +305,8 @@ section{
     
 }
 
+
+
 #container7{
     
     background-color: rgb(0, 0, 0);
@@ -340,8 +340,28 @@ section{
 
 #container2 h1{
     font-weight: bold;
-    font-size:10rem;
+    font-size:11.5rem;
     color: #ffffff;
+    z-index: 1;
+   
+}
+
+#container9 h1{
+    font-weight: bold;
+    font-size:11.5rem;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+    margin-top: 200px;
+   
+}
+
+#container8 h1{
+    font-weight: bold;
+    font-size:10rem;
+    color: #820000;
+    text-align: center;
+    z-index: 1;
    
 }
 
@@ -425,7 +445,7 @@ section{
 
 
 
-@media(min-width:300px) and (max-width:414px){
+@media(min-width:300px) and (max-width:444px){
     
 .home-img{
     margin-top: -100px;
@@ -441,6 +461,12 @@ section{
     font-size: 3.9rem;
     margin-top: 100px;
     z-index: 1;
+}
+
+#container9 h1{
+    font-size: 3.9rem;
+    margin-top: 100px;
+    z-index: 1; 
 }
 #exp h1{
     font-size: 5rem;
@@ -586,3 +612,8 @@ section{
     }
   }
 
+
+
+
+
+  

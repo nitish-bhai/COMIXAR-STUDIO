@@ -213,6 +213,7 @@ section{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+    overflow: hidden;
 }
 
 .typing-text span{

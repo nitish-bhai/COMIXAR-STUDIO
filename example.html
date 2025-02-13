@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive YouTube Shorts Slider</title>
+    <title>Bidirectional YouTube Shorts Slider</title>
     <style>
         body {
             background-color: #000;
@@ -18,16 +18,16 @@
             justify-content: center;
             height: 100vh;
             width: 100%;
+            overflow: hidden;
             position: relative;
         }
         .scroll-wrapper {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+            white-space: nowrap;
+            gap: 15px;
             padding: 20px;
             width: 100%;
-            overflow-x: auto;
+            overflow-x: scroll;
             scroll-behavior: smooth;
             scrollbar-width: none;
         }
@@ -36,8 +36,8 @@
         }
         .video-card {
             position: relative;
-            width: 250px;
-            height: 450px;
+            width: 200px;
+            height: 355px;
             background-color: #222;
             border-radius: 10px;
             overflow: hidden;
@@ -70,29 +70,21 @@
             opacity: 1;
             pointer-events: auto;
         }
-        @media (max-width: 768px) {
-            .scroll-wrapper {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .video-card {
-                width: 200px;
-                height: 355px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="scroll-wrapper" id="scroll-container">
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail1.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
             <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail1.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail1.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail2.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail3.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail1.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID1?autoplay=1&controls=1" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail2.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID2?autoplay=1&controls=1" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail3.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID3?autoplay=1&controls=1" allowfullscreen></iframe></div>
+            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail4.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID4?autoplay=1&controls=1" allowfullscreen></iframe></div>
         </div>
     </div>
+    
     <script>
         let scrollContainer = document.getElementById("scroll-container");
         let scrollDirection = 1;
@@ -105,6 +97,7 @@
             scrollInterval = setInterval(() => {
                 if (!isAutoScrolling) return;
                 scrollContainer.scrollLeft += autoScrollSpeed * scrollDirection;
+
                 if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1) {
                     scrollDirection = -1;
                 } else if (scrollContainer.scrollLeft <= 0) {
@@ -112,7 +105,7 @@
                 }
             }, 20);
         }
-        
+
         let isDragging = false;
         let startX;
         let scrollLeft;

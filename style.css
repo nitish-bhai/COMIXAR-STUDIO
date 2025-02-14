@@ -61,8 +61,8 @@ nav a{
 
 nav a:hover,
 nav a.active{
-    color: #800000;
-    border-bottom: 3px solid #800000;
+    color: #eb0101;
+    border-bottom: 3px solid #eb0000;
 }
 
 @media(max-width:799px){
@@ -99,7 +99,7 @@ nav a.active{
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
-    border-bottom: 0.5px solid #800000;
+    border-bottom: 0.5px solid #eb0000;
 }
 
 .home{
@@ -118,7 +118,7 @@ section{
 }
 
 .detail{
-    color: #800000;
+    color: #ed0000;
 }
 
 .home-content h3{
@@ -133,13 +133,13 @@ section{
 
 .home-img{
     border-radius: 50%;
-    border: solid 5px #740000;
+    border: solid 5px #ca1010;
     margin-bottom: 200px;
     
 }
 
 .home-img:hover{
-    border: solid 5px #fe1212;
+    border: solid 5px #ffffff;
     transition: 1s;
     
 }
@@ -150,7 +150,7 @@ section{
     position: relative;
     width: 20vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #800000;
+    box-shadow: 0 0 25px solid #e90000;
     cursor: pointer;
     transition: 0.2s linear;
     
@@ -661,6 +661,7 @@ section{
     overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    
 }
 .scroll-wrapper::-webkit-scrollbar {
     display: none;
@@ -701,8 +702,6 @@ section{
     opacity: 1;
     pointer-events: auto;
 }
-
-
 
 
 

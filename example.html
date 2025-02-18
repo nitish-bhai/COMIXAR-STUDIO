@@ -3,148 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bidirectional YouTube Shorts Slider</title>
+    <title>Document</title>
     <style>
-        body {
-            background-color: #000;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-        .scroll-wrapper {
-            display: flex;
-            white-space: nowrap;
-            gap: 15px;
-            padding: 20px;
-            width: 100%;
-            overflow-x: scroll;
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
-        .scroll-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-        .video-card {
-            position: relative;
-            width: 200px;
-            height: 355px;
-            background-color: #222;
-            border-radius: 10px;
-            overflow: hidden;
-            flex-shrink: 0;
-            transition: transform 0.3s ease-in-out;
-        }
-        .video-card iframe, 
-        .video-card .thumbnail {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .thumbnail {
-            background-size: cover;
-            background-position: center;
-            cursor: pointer;
-        }
-        .video-card:hover .thumbnail {
-            opacity: 0;
-        }
-        .video-card iframe {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .video-card:hover iframe {
-            opacity: 1;
-            pointer-events: auto;
-        }
+        .keyboard {
+  background-color: #101013;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+
+.key {
+  font-size: 15vw;
+  display: inline-block;
+  letter-spacing: -1vw;
+  transition: transform 0.2s;
+}
+
+
+
+@keyframes pressDown1 {
+  30%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown2 {
+  70%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown3 {
+  30%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown4 {
+  40%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown5 {
+  20%,
+  30%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown6 {
+  60%,
+  70%,
+  100% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown7 {
+  10%,
+  20%,
+  100% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pressDown8 {
+  35%,
+  45%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+}
+
+
+
+.key:nth-child(1) {
+  animation: pressDown1 2s infinite;
+}
+
+.key:nth-child(2) {
+  animation: pressDown2 3s infinite;
+}
+
+.key:nth-child(3) {
+  animation: pressDown3 4s infinite;
+}
+
+.key:nth-child(4) {
+  animation: pressDown4 2.5s infinite;
+}
+
+.key:nth-child(5) {
+  animation: pressDown5 2.5s infinite;
+}
+
+.key:nth-child(6) {
+  animation: pressDown6 3.5s infinite;
+}
+
+.key:nth-child(7) {
+  animation: pressDown7 2.2s infinite;
+}
+
+.key:nth-child(8) {
+  animation: pressDown8 3.2s infinite;
+}
+
+
+
+
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="scroll-wrapper" id="scroll-container">
-            <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('vfx1.png');"></div><iframe width="537" height="954" src="https://www.youtube.com/embed/1eGq94ya270" title="AAJ MARNE KA IRADA HAI #kalki #kalki2898ad #vfx #cgi #beforeandafter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail1.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID1?autoplay=1&controls=1" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail2.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID2?autoplay=1&controls=1" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail3.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID3?autoplay=1&controls=1" allowfullscreen></iframe></div>
-            <div class="video-card"><div class="thumbnail" style="background-image: url('thumbnail4.jpg');"></div><iframe src="https://www.youtube.com/embed/VIDEO_ID4?autoplay=1&controls=1" allowfullscreen></iframe></div>
-        </div>
-    </div>
-    
-    <script>
-        let scrollContainer = document.getElementById("scroll-container");
-        let scrollDirection = 1;
-        let autoScrollSpeed = 1;
-        let isAutoScrolling = true;
-        let scrollInterval;
-        
-        function startAutoScroll() {
-            clearInterval(scrollInterval);
-            scrollInterval = setInterval(() => {
-                if (!isAutoScrolling) return;
-                scrollContainer.scrollLeft += autoScrollSpeed * scrollDirection;
-
-                if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1) {
-                    scrollDirection = -1;
-                } else if (scrollContainer.scrollLeft <= 0) {
-                    scrollDirection = 1;
-                }
-            }, 20);
-        }
-
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
-
-        scrollContainer.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            startX = e.pageX - scrollContainer.offsetLeft;
-            scrollLeft = scrollContainer.scrollLeft;
-            isAutoScrolling = false;
-        });
-
-        scrollContainer.addEventListener("mouseleave", () => {
-            isDragging = false;
-        });
-
-        scrollContainer.addEventListener("mouseup", () => {
-            isDragging = false;
-            setTimeout(() => { isAutoScrolling = true; startAutoScroll(); }, 2000);
-        });
-
-        scrollContainer.addEventListener("mousemove", (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - scrollContainer.offsetLeft;
-            const walk = (x - startX) * 2;
-            scrollContainer.scrollLeft = scrollLeft - walk;
-        });
-
-        document.querySelectorAll(".video-card").forEach(card => {
-            card.addEventListener("mouseenter", () => isAutoScrolling = false);
-            card.addEventListener("mouseleave", () => isAutoScrolling = true);
-        });
-
-        document.querySelectorAll("iframe").forEach(iframe => {
-            iframe.addEventListener("mouseenter", () => isAutoScrolling = false);
-            iframe.addEventListener("mouseleave", () => isAutoScrolling = true);
-        });
-
-        startAutoScroll();
-    </script>
+    <div class="keyboard">
+        <span class="key">K</span>
+        <span class="key">E</span>
+        <span class="key">Y</span>
+        <span class="key">B</span>
+        <span class="key">O</span>
+        <span class="key">A</span>
+        <span class="key">R</span>
+        <span class="key">D</span>
+      </div>
 </body>
 </html>

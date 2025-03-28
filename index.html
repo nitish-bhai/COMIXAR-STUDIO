@@ -199,8 +199,15 @@ container.style.setProperty('--position', `${e.target.value}%`);
 
     <div id="container2">
         <h1>ENVIRONMENTS</h1>
+        
     </div>
-   <h1 style="font-size: 3rem; color: red;">COMING SOON...</h1>
+    <div class="container">
+        <div class="scroll-wrapper" id="scroll-container">
+            <div class="video-card">
+                <div class="thumbnail" style="background-image: url('env1.png');" onclick="playVideo(this)"></div>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/3hFj4_Z4Vus" title="HOW TO MAKE ANIME STYLE IN BLENDER #shots #anime #blender" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
             <!-- Add more video cards here -->
         </div>
     </div>
@@ -211,17 +218,53 @@ container.style.setProperty('--position', `${e.target.value}%`);
         <h1>MY SKILLS</h1>
     </div>
     <div id="container">
-        <div class="box3">
-            <img src="SOFTW00086400.png" style="max-width: 100%; max-height: 100%; " alt="">
-        </div>
-        <div class="box2">
-            <h2>■ Pro video editing in DaVinci Resolve for smooth, engaging content that keeps viewers hooked.
-<br><br>
-                ■ Advanced compositing in After Effects for high-quality visuals that elevate brand appeal.
-                <br><br>
-                ■ 3D animation & environments in Blender to create stunning, immersive visuals.
-                <br> <br>
-                ■ High-impact VFX & storytelling that captivate audiences and drive conversions.</h2>
+        <div class="containerr">
+            <div class="gradient-circle-1"></div>
+            <div class="gradient-circle-2"></div>
+            
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="profile-image">
+                        <div class="profile-image-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2riJQ0vxOei6bYR6j8NtwriuFkV2oasVjCQ&s" alt="Jack Doe">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">DAVINCI RESOLVE</h3>
+                        <p class="card-description">Pro video editing in DaVinci Resolve for smooth, engaging content that keeps viewers hooked.</p>
+                       
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="profile-image">
+                        <div class="profile-image-container">
+                            <img src="https://static.vecteezy.com/system/resources/previews/055/138/449/non_2x/adobe-after-effect-logo-square-rounded-adobe-after-effect-logo-adobe-after-effect-logo-free-download-free-png.png" alt="Joe Wood">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ADOBE AFTER EFFECTS</h3>
+                        <p class="card-description">Advanced compositing in After Effects for high-quality visuals that elevate brand appeal.</p>
+                       
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="profile-image">
+                        <div class="profile-image-container">
+                            <img src="https://icon-library.com/images/blender-3d-icon/blender-3d-icon-1.jpg" alt="Mark Doe">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">BLENDER 3D</h3>
+                        <p class="card-description">3D animation & environments in Blender to create stunning, immersive visuals.</p>
+                       
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

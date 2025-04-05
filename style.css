@@ -118,7 +118,7 @@ section{
 }
 
 .detail{
-    color: #C00000;
+    color: #fc2424;
 }
 
 .home-content h3{
@@ -859,14 +859,14 @@ section{
 
 .card-title {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
 }
 
 .card-description {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1rem;
+    color: rgba(175, 94, 94, 0.64);
+    font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
 
